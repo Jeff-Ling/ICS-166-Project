@@ -5,9 +5,11 @@ using UnityEngine;
 using TMPro;
 // using CodeMonkey.Utils;
 
-public class ItemWorld : MonoBehaviour {
+public class ItemWorld : MonoBehaviour
+{
 
-    public static ItemWorld SpawnItemWorld(Vector3 position, Item item) {
+    public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
+    {
         Transform transform = Instantiate(ItemAssets.Instance.pfItemWorld, position, Quaternion.identity);
 
         ItemWorld itemWorld = transform.GetComponent<ItemWorld>();
@@ -17,10 +19,10 @@ public class ItemWorld : MonoBehaviour {
     }
 
     //public static ItemWorld DropItem(Vector3 dropPosition, Item item) {
-        // Vector3 randomDir = UtilsClass.GetRandomDir();
-        //ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 8f, item);
-        //itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 40f, ForceMode2D.Impulse);
-        //return itemWorld;
+    // Vector3 randomDir = UtilsClass.GetRandomDir();
+    //ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 8f, item);
+    //itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 40f, ForceMode2D.Impulse);
+    //return itemWorld;
     //}
 
 
@@ -29,28 +31,35 @@ public class ItemWorld : MonoBehaviour {
     // private Light2D light2D;
     private TextMeshPro textMeshPro;
 
-    private void Awake() {
+    private void Awake()
+    {
         spriteRenderer = GetComponent<SpriteRenderer>();
         // light2D = transform.Find("Light").GetComponent<Light2D>();
         textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
     }
 
-    public void SetItem(Item item) {
+    public void SetItem(Item item)
+    {
         this.item = item;
         spriteRenderer.sprite = item.GetSprite();
         //light2D.color = item.GetColor();
-        if (item.amount > 1) {
+        if (item.amount > 1)
+        {
             textMeshPro.SetText(item.amount.ToString());
-        } else {
+        }
+        else
+        {
             textMeshPro.SetText("");
         }
     }
 
-    public Item GetItem() {
+    public Item GetItem()
+    {
         return item;
     }
 
-    public void DestroySelf() {
+    public void DestroySelf()
+    {
         Destroy(gameObject);
     }
 

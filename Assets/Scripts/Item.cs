@@ -2,11 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+// Author: Jiefu Ling(jieful2)
+// The item script
 
 [Serializable]
-public class Item {
+public class Item
+{
 
-    public enum ItemType {
+    public enum ItemType
+    {
         Sword,
         HealthPotion,
         ManaPotion,
@@ -16,41 +22,54 @@ public class Item {
 
     public ItemType itemType;
     public int amount;
+    public GameObject button;
 
 
-    public Sprite GetSprite() {
-        switch (itemType) {
-        default:
-        case ItemType.Sword:        return ItemAssets.Instance.swordSprite;
-        case ItemType.HealthPotion: return ItemAssets.Instance.healthPotionSprite;
-        case ItemType.ManaPotion:   return ItemAssets.Instance.manaPotionSprite;
-        case ItemType.Coin:         return ItemAssets.Instance.coinSprite;
-        case ItemType.Medkit:       return ItemAssets.Instance.medkitSprite;
+    public Sprite GetSprite()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.Sword: return ItemAssets.Instance.swordSprite;
+            case ItemType.HealthPotion: return ItemAssets.Instance.healthPotionSprite;
+            case ItemType.ManaPotion: return ItemAssets.Instance.manaPotionSprite;
+            case ItemType.Coin: return ItemAssets.Instance.coinSprite;
+            case ItemType.Medkit: return ItemAssets.Instance.medkitSprite;
         }
     }
 
-    public Color GetColor() {
-        switch (itemType) {
-        default:
-        case ItemType.Sword:        return new Color(1, 1, 1);
-        case ItemType.HealthPotion: return new Color(1, 0, 0);
-        case ItemType.ManaPotion:   return new Color(0, 0, 1);
-        case ItemType.Coin:         return new Color(1, 1, 0);
-        case ItemType.Medkit:       return new Color(1, 0, 1);
+    public Color GetColor()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.Sword: return new Color(1, 1, 1);
+            case ItemType.HealthPotion: return new Color(1, 0, 0);
+            case ItemType.ManaPotion: return new Color(0, 0, 1);
+            case ItemType.Coin: return new Color(1, 1, 0);
+            case ItemType.Medkit: return new Color(1, 0, 1);
         }
     }
 
-    public bool IsStackable() {
-        switch (itemType) {
-        default:
-        case ItemType.Coin:
-        case ItemType.HealthPotion:
-        case ItemType.ManaPotion:
-            return true;
-        case ItemType.Sword:
-        case ItemType.Medkit:
-            return false;
+    public bool IsStackable()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.Coin:
+            case ItemType.HealthPotion:
+            case ItemType.ManaPotion:
+                return true;
+            case ItemType.Sword:
+            case ItemType.Medkit:
+                return false;
         }
+    }
+
+    public void GetItem()
+    {
+        // Activate the UI button (Maybe text later)
+        button.SetActive(true);
     }
 
 }

@@ -13,16 +13,28 @@ public class Player : MonoBehaviour
     private Rigidbody RigidBody;
     private float MovementInputValue = 0f;
 
+    private Inventory inventory;              // The list of inventory
+    private bool isTouched;                   // Whether Player is touched with item
+    private GameObject itemTouched;
+
     // Start is called before the first frame update
     void Start()
     {
         RigidBody = this.GetComponent<Rigidbody>();
+
+        inventory = new Inventory(UseItem);
     }
 
     // Update is called once per frame
     void Update()
     {
         GetPlayerInput();
+
+        // Player press E and it is able to interact
+        if (Input.GetKey(KeyCode.E) && isTouched)
+        {
+            Interaction();
+        }
     }
 
     private void FixedUpdate()
@@ -30,14 +42,55 @@ public class Player : MonoBehaviour
         Move();
     }
 
-    void GetPlayerInput()
+    private void GetPlayerInput()
     {
         MovementInputValue = Input.GetAxisRaw("Horizontal");
-        Debug.Log(MovementInputValue);
     }
 
-    void Move()
+    private void Move()
     {
         RigidBody.velocity = transform.right * MovementInputValue * Speed * Time.deltaTime;
+    }
+
+    private void Interaction()
+    {
+        // Player pick up something and add to the inventory and the item should disappear
+        inventory.AddItem(itemTouched.GetComponent<Item>());
+        itemTouched.GetComponent<Item>().GetItem();
+        itemTouched.SetActive(false);
+        
+        Debug.Log("Added to the inventory:");
+        Debug.Log(itemTouched.GetComponent<Item>().itemType);
+    }
+
+    private void UseItem(Item item)
+    {
+        switch (item.itemType)
+        {
+            case Item.ItemType.HealthPotion:
+                break;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject item = other.gameObject;
+        if (item.GetComponent<Item>() != null)
+        {
+            // Touch the item
+            isTouched = true;
+            itemTouched = item;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        GameObject item = other.gameObject;
+        if (item.GetComponent<Item>() != null)
+        {
+            // Leave the item
+            isTouched = false;
+            itemTouched = null;
+        }
     }
 }
