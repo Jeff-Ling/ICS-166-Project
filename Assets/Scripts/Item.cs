@@ -24,6 +24,8 @@ public class Item
     public int amount;
     public GameObject button;
 
+    public bool collectable;
+
 
     public Sprite GetSprite()
     {

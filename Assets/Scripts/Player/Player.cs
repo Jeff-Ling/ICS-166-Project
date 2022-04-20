@@ -54,13 +54,22 @@ public class Player : MonoBehaviour
 
     private void Interaction()
     {
-        // Player pick up something and add to the inventory and the item should disappear
-        inventory.AddItem(itemTouched.GetComponent<Item>());
-        itemTouched.GetComponent<Item>().GetItem();
-        itemTouched.SetActive(false);
-        
-        Debug.Log("Added to the inventory:");
-        Debug.Log(itemTouched.GetComponent<Item>().itemType);
+        if (itemTouched.GetComponent<Item>().collectable)
+        {
+
+            // Player pick up something and add to the inventory and the item should disappear
+            inventory.AddItem(itemTouched.GetComponent<Item>());
+            itemTouched.GetComponent<Item>().GetItem();
+            itemTouched.SetActive(false);
+
+            Debug.Log("Added to the inventory:");
+            Debug.Log(itemTouched.GetComponent<Item>().itemType);
+        }
+        else
+        {
+            // Not collectable item should open something immediatedly.
+            itemTouched.GetComponent<Item>().GetItem();
+        }
     }
 
     private void UseItem(Item item)
