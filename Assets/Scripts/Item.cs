@@ -68,7 +68,7 @@ public class Item
         }
     }
 
-    public void GetItem()
+    public void ActivateButton()
     {
         // Activate the UI button (Maybe text later)
         button.SetActive(true);

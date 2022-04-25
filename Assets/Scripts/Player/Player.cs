@@ -33,7 +33,10 @@ public class Player : MonoBehaviour
         // Player press E and it is able to interact
         if (Input.GetKey(KeyCode.E) && isTouched)
         {
-            Interaction();
+            if (itemTouched != null)
+            {
+                Interaction();
+            }
         }
     }
 
@@ -54,21 +57,21 @@ public class Player : MonoBehaviour
 
     private void Interaction()
     {
-        if (itemTouched.GetComponent<Item>().collectable)
+        if (itemTouched.GetComponent<ItemWorld>().GetItem().collectable)
         {
 
             // Player pick up something and add to the inventory and the item should disappear
-            inventory.AddItem(itemTouched.GetComponent<Item>());
-            itemTouched.GetComponent<Item>().GetItem();
-            itemTouched.SetActive(false);
+            inventory.AddItem(itemTouched.GetComponent<ItemWorld>().GetItem());
+            itemTouched.GetComponent<ItemWorld>().GetItem().ActivateButton();
+            itemTouched.GetComponent<ItemWorld>().DestroySelf();
 
             Debug.Log("Added to the inventory:");
-            Debug.Log(itemTouched.GetComponent<Item>().itemType);
+            Debug.Log(itemTouched.GetComponent<ItemWorld>().GetItem().itemType);
         }
         else
         {
             // Not collectable item should open something immediatedly.
-            itemTouched.GetComponent<Item>().GetItem();
+            UseItem(itemTouched.GetComponent<ItemWorld>().GetItem());
         }
     }
 
@@ -84,7 +87,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject item = other.gameObject;
-        if (item.GetComponent<Item>() != null)
+        if (item.GetComponent<ItemWorld>() != null)
         {
             // Touch the item
             isTouched = true;
@@ -95,7 +98,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         GameObject item = other.gameObject;
-        if (item.GetComponent<Item>() != null)
+        if (item.GetComponent<ItemWorld>() != null)
         {
             // Leave the item
             isTouched = false;
