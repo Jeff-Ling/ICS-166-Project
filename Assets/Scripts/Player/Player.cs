@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private Rigidbody RigidBody;
     private float MovementInputValue = 0f;
 
+    private Animator animator;
+
+    // Inventory Element
     private Inventory inventory;              // The list of inventory
     private bool isTouched;                   // Whether Player is touched with item
     private GameObject itemTouched;
@@ -23,12 +26,17 @@ public class Player : MonoBehaviour
         RigidBody = this.GetComponent<Rigidbody>();
 
         inventory = new Inventory(UseItem);
+
+        animator = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         GetPlayerInput();
+
+        // Set animator parameter
+        animator.SetFloat("MovementValue", MovementInputValue);
 
         // Player press E and it is able to interact
         if (Input.GetKey(KeyCode.E) && isTouched)
