@@ -18,7 +18,7 @@ public class ItemWorld : MonoBehaviour
     }
     **/
 
-    public Item item;
+    private Item item;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()

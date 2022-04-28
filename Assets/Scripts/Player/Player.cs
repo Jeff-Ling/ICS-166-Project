@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 // Author: Jiefu Ling(jieful2)
 // This script is used to control player's movement.
@@ -70,7 +72,7 @@ public class Player : MonoBehaviour
 
             // Player pick up something and add to the inventory and the item should disappear
             inventory.AddItem(itemTouched.GetComponent<ItemWorld>().GetItem());
-            itemTouched.GetComponent<ItemWorld>().GetItem().ActivateButton();
+            itemTouched.GetComponent<ItemWorld>().GetItem().ActivateButton(inventory);
             itemTouched.GetComponent<ItemWorld>().DestroySelf();
 
             Debug.Log("Added to the inventory:");
@@ -87,7 +89,8 @@ public class Player : MonoBehaviour
     {
         switch (item.itemType)
         {
-            case Item.ItemType.HealthPotion:
+            case Item.ItemType.tutorialRoom_Key:
+                SceneManager.LoadScene(1);             // Load scene to Room 1
                 break;
         }
     }

@@ -64,14 +64,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Button\TutorialRoom_Key.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameManager_Tutorial.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
-    <Compile Include="Assets\Scripts\Item.cs" />
-    <Compile Include="Assets\Scripts\ItemAssets.cs" />
-    <Compile Include="Assets\Scripts\ItemWorld.cs" />
-    <Compile Include="Assets\Scripts\ItemWorldSpawner.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemAssets.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemWorld.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemWorldSpawner.cs" />
+    <Compile Include="Assets\Scripts\Inventory\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\menuControl.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
