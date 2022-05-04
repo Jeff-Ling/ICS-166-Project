@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
 
 // Author: Jiefu Ling(jieful2)
 // The item script
@@ -20,6 +21,9 @@ public class Item
     public int amount;
     public GameObject button;
 
+    public Flowchart mainFlowchart;
+    public string blockName;
+
     public bool collectable;
 
 
@@ -35,10 +39,13 @@ public class Item
 
     public void ActivateButton(Inventory inventory)
     {
-        // Activate the UI button (Maybe text later)
+        // Activate the UI button
         button.SetActive(true);
         button.GetComponent<TutorialRoom_Key>().SetItem(this);
         button.GetComponent<TutorialRoom_Key>().SetInventory(inventory);
+
+        // Activate text (Fungus)
+        mainFlowchart.ExecuteBlock(blockName);
     }
 
 }

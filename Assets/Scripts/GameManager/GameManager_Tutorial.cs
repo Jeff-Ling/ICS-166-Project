@@ -1,18 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class GameManager_Tutorial : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject player;
+    public GameObject key1;
+
+    public Flowchart mainFlowchart;
+
+    // Bool Check
+    private bool flowchartHasShown_key1 = false;
+
+    private void Update()
     {
-        
+        CheckDistanceKey1();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CheckDistanceKey1()
     {
-        
+        if (!flowchartHasShown_key1 && Vector3.Distance(player.transform.position, key1.transform.position) < 1f)
+        {
+            flowchartHasShown_key1 = true;
+            mainFlowchart.ExecuteBlock("Before Pick Up Key1");
+        }
     }
 }
