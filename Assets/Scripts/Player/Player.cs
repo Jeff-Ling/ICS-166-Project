@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     private bool isTouched;                   // Whether Player is touched with item
     private GameObject itemTouched;
 
+    private bool enableInput = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,19 +37,29 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetPlayerInput();
+
+        if (enableInput)
+        {
+            GetPlayerInput();
+
+            // Player press E and it is able to interact
+            if (Input.GetKey(KeyCode.E) && isTouched)
+            {
+                if (itemTouched != null)
+                {
+                    Interaction();
+                }
+            }
+        }
+        else
+        {
+            MovementInputValue = 0f;
+        }
+
 
         // Set animator parameter
         animator.SetFloat("MovementValue", MovementInputValue);
 
-        // Player press E and it is able to interact
-        if (Input.GetKey(KeyCode.E) && isTouched)
-        {
-            if (itemTouched != null)
-            {
-                Interaction();
-            }
-        }
     }
 
     private void FixedUpdate()
@@ -115,5 +127,15 @@ public class Player : MonoBehaviour
             isTouched = false;
             itemTouched = null;
         }
+    }
+
+    public void EnableInput()
+    {
+        enableInput = true;
+    }
+
+    public void DisableInput()
+    {
+        enableInput = false;
     }
 }
