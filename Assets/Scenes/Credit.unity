@@ -893,7 +893,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1323745574}
-        m_MethodName: exitGameButton
+        m_MethodName: backToMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

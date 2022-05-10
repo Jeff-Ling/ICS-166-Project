@@ -745,6 +745,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6722766428945897802, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: Speed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722766428945897802, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6722766428945897809, guid: e193db724a2645f418b1bd56c3cacb7e,
         type: 3}
       propertyPath: m_Name

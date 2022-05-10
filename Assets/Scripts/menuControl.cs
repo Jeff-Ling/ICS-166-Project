@@ -1,6 +1,7 @@
 ﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class menuControl : MonoBehaviour
 {
@@ -30,6 +31,22 @@ public class menuControl : MonoBehaviour
         pauseMenuUI.SetActive(true);
         isPaused = true;
         Time.timeScale = 0f;
+    }
+
+    public void newGameButton()
+    {
+        SceneManager.LoadScene("Tutorial Room (Room #0)");
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void creditButton()
+    {
+        SceneManager.LoadScene("Credit");
+    }
+
+    public void backToMain()
+    {
+        SceneManager.LoadScene("Intro");
     }
 
     public void resumeButton()
