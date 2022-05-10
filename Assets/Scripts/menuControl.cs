@@ -43,5 +43,6 @@ public class menuControl : MonoBehaviour
     public void exitGameButton()
     {
         Application.Quit();
+        Debug.Log("Quit Success.");
     }
 }
