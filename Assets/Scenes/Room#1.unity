@@ -473,8 +473,6 @@ GameObject:
   - component: {fileID: 143310718}
   - component: {fileID: 143310717}
   - component: {fileID: 143310720}
-  - component: {fileID: 143310722}
-  - component: {fileID: 143310721}
   - component: {fileID: 143310723}
   m_Layer: 0
   m_Name: Flowchart
@@ -499,7 +497,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 335
     y: 285
-    width: 162.8
+    width: 161.39238
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -509,9 +507,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 143310720}
-  - {fileID: 143310722}
   - {fileID: 143310723}
-  - {fileID: 143310721}
   suppressAllAutoSelections: 0
 --- !u!114 &143310718
 MonoBehaviour:
@@ -526,11 +522,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: -22.349361, y: -80.5771}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.7900002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -539,7 +535,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 143310717}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 143310723}
   variables: []
   description: 
   stepPause: 0
@@ -580,40 +577,6 @@ MonoBehaviour:
   itemId: 1
   indentLevel: 0
   sayDialog: {fileID: 227484285}
---- !u!114 &143310721
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143310715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  targetObject: {fileID: 275998109}
-  methodName: EnableInput
-  delay: 0
---- !u!114 &143310722
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143310715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 2
-  indentLevel: 0
-  targetObject: {fileID: 275998109}
-  methodName: DisableInput
-  delay: 0
 --- !u!114 &143310723
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2003,7 +1966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctPosition:
   - 0
-  - -180
+  - 180
   isCorrected: 0
 --- !u!65 &691521779
 BoxCollider:
@@ -2213,7 +2176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctPosition:
   - 90
-  - -90.00001
+  - 270
   isCorrected: 0
 --- !u!65 &771573172
 BoxCollider:
@@ -4374,7 +4337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctPosition:
   - 90
-  - -90
+  - 270
   isCorrected: 0
 --- !u!65 &1450326874
 BoxCollider:
@@ -4870,7 +4833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1628993089
 Transform:
   m_ObjectHideFlags: 0
