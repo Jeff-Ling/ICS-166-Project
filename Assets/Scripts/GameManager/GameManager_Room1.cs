@@ -9,6 +9,8 @@ public class GameManager_Room1 : MonoBehaviour
     public GameObject puzzleBox;
     public GameObject puzzleBoxScene;
 
+    private bool firstTimePuzzleBox = true;
+
     private void Start()
     {
         Time.timeScale = 1f;
@@ -22,9 +24,10 @@ public class GameManager_Room1 : MonoBehaviour
 
     private void OpenPipeGame()
     {
-        if (Vector3.Distance(player.transform.position, puzzleBox.transform.position) < 3f && Input.GetKey(KeyCode.E))
+        if (Vector3.Distance(player.transform.position, puzzleBox.transform.position) < 3f && Input.GetKey(KeyCode.E) && firstTimePuzzleBox)
         {
             puzzleBoxScene.SetActive(true);
+            firstTimePuzzleBox = false;
         }
     }
 }
