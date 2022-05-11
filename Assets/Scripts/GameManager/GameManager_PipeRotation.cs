@@ -43,7 +43,10 @@ public class GameManager_PipeRotation : MonoBehaviour
         allCorrect = true;
         for (int i = 0; i < pipes.Length; i++)
         {
-            allCorrect = pipes[i].GetComponent<pipeControl>().GetisCorrected();
+            if (pipes[i].GetComponent<pipeControl>().GetisCorrected() == false)
+            {
+                allCorrect = false;
+            }
         }
     }
 }
