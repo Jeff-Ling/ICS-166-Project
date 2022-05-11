@@ -12,9 +12,8 @@ public class TutorialRoom_Key : MonoBehaviour
 
     public void OnClick()
     {
-        if (Vector3.Distance(target.transform.position, player.transform.position) < 2f)
+        if (Vector3.Distance(target.transform.position, player.transform.position) < 5f)
         {
-            Debug.Log("click the button");
             inventory.UseItem(item);
         }
     }

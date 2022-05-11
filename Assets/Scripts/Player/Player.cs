@@ -104,6 +104,9 @@ public class Player : MonoBehaviour
             case Item.ItemType.tutorialRoom_Key:
                 SceneManager.LoadScene(1);             // Load scene to Room 1
                 break;
+            case Item.ItemType.room1_Key:
+                SceneManager.LoadScene(2);
+                break;
         }
     }
 

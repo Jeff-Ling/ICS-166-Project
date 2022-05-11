@@ -14,7 +14,8 @@ public class Item
 
     public enum ItemType
     {
-        tutorialRoom_Key, Room#1_Key,
+        tutorialRoom_Key,
+        room1_Key,
     }
 
     public ItemType itemType;
