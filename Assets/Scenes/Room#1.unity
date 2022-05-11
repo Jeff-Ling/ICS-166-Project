@@ -499,7 +499,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 335
     y: 285
-    width: 160
+    width: 162.8
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2001,7 +2001,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041c17fe76c94d3489f820291e0da74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPosition: 0
+  correctPosition:
+  - 0
+  - -180
   isCorrected: 0
 --- !u!65 &691521779
 BoxCollider:
@@ -2209,7 +2211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041c17fe76c94d3489f820291e0da74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPosition: 90
+  correctPosition:
+  - 90
+  - -90.00001
   isCorrected: 0
 --- !u!65 &771573172
 BoxCollider:
@@ -2332,7 +2336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041c17fe76c94d3489f820291e0da74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPosition: 180
+  correctPosition:
+  - 180
   isCorrected: 0
 --- !u!65 &816006027
 BoxCollider:
@@ -3313,7 +3318,7 @@ GameObject:
   - component: {fileID: 1205416593}
   - component: {fileID: 1205416592}
   m_Layer: 0
-  m_Name: stair
+  m_Name: Staircase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3358,7 +3363,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcd5b5f11de95ec4ba92005e4a404502, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55688b41a6a0bb4428ddd5570e3faf16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3377,8 +3382,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205416591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: -3, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 30, y: -1.5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1972812819}
   m_Father: {fileID: 0}
@@ -3994,7 +3999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041c17fe76c94d3489f820291e0da74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPosition: 270
+  correctPosition:
+  - 270
   isCorrected: 0
 --- !u!65 &1328105207
 BoxCollider:
@@ -4366,7 +4372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041c17fe76c94d3489f820291e0da74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPosition: 90
+  correctPosition:
+  - 90
+  - -90
   isCorrected: 0
 --- !u!65 &1450326874
 BoxCollider:
@@ -4690,7 +4698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 72b45094beb364b4aa0cf130065a02f0, type: 3}
       propertyPath: m_Name
-      value: Weapon box
+      value: Puzzle Box
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72b45094beb364b4aa0cf130065a02f0, type: 3}
       propertyPath: m_RootOrder
@@ -4862,7 +4870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1628993089
 Transform:
   m_ObjectHideFlags: 0

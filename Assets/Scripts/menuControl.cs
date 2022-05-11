@@ -35,18 +35,18 @@ public class menuControl : MonoBehaviour
 
     public void newGameButton()
     {
-        SceneManager.LoadScene("Tutorial Room (Room #0)");
+        SceneManager.LoadScene(1);
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void creditButton()
     {
-        SceneManager.LoadScene("Credit");
+        SceneManager.LoadScene(4);
     }
 
     public void backToMain()
     {
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene(0);
     }
 
     public void resumeButton()

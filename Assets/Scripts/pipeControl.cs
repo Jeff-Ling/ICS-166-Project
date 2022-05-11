@@ -4,21 +4,35 @@ using UnityEngine;
 
 public class pipeControl : MonoBehaviour
 {
-    public float correctPosition;
+    public float[] correctPosition;
     
     [SerializeField]
     bool isCorrected = false;
+
+    int possibleRotation = 1;
 
     float [] rotation = {0, 90, 180, 270};
 
     private void Start()
     {
+        possibleRotation = correctPosition.Length;
+
         int rand = Random.Range(0, rotation.Length);
         transform.eulerAngles = new Vector3(0, 0, rotation[rand]);
 
-        if (transform.eulerAngles.z == correctPosition)
+        if (possibleRotation > 1)
         {
-            isCorrected = true;
+            if ((correctPosition[0] - 1 < transform.eulerAngles.z && transform.eulerAngles.z < correctPosition[0] + 1) || (correctPosition[1] - 1 < transform.eulerAngles.z && transform.eulerAngles.z < correctPosition[1] + 1))
+            {
+                isCorrected = true;
+            }
+        }
+        else
+        {
+            if (transform.eulerAngles.z == correctPosition[0])
+            {
+                isCorrected = true;
+            }
         }
     }
 
@@ -26,13 +40,29 @@ public class pipeControl : MonoBehaviour
     {
         transform.Rotate(new Vector3(0, 0, 90));
 
-        if (transform.eulerAngles.z == correctPosition && isCorrected == false)
+        Debug.Log(transform.eulerAngles.z);
+
+        if (possibleRotation > 1)
         {
-            isCorrected = true;
+            if ((correctPosition[0] - 1 < transform.eulerAngles.z && transform.eulerAngles.z < correctPosition[0] + 1) || (correctPosition[1] - 1 < transform.eulerAngles.z && transform.eulerAngles.z < correctPosition[1] + 1) && isCorrected == false)
+            {
+                isCorrected = true;
+            }
+            else if (isCorrected == true)
+            {
+                isCorrected = false;
+            }
         }
-        else if (isCorrected == true)
+        else
         {
-            isCorrected = false;
+            if (transform.eulerAngles.z == correctPosition[0] && isCorrected == false)
+            {
+                isCorrected = true;
+            }
+            else if (isCorrected == true)
+            {
+                isCorrected = false;
+            }
         }
     }
 

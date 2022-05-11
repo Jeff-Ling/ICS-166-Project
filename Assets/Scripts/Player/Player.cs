@@ -102,10 +102,10 @@ public class Player : MonoBehaviour
         switch (item.itemType)
         {
             case Item.ItemType.tutorialRoom_Key:
-                SceneManager.LoadScene(1);             // Load scene to Room 1
+                SceneManager.LoadScene(2);             // Load scene to Room 1
                 break;
             case Item.ItemType.room1_Key:
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);             // Load scene to End Game
                 break;
         }
     }
