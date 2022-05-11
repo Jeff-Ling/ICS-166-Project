@@ -9,6 +9,11 @@ public class GameManager_Room1 : MonoBehaviour
     public GameObject puzzleBox;
     public GameObject puzzleBoxScene;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     // Update is called once per frame
     void Update()
     {
