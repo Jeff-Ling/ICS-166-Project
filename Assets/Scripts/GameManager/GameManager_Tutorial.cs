@@ -20,7 +20,7 @@ public class GameManager_Tutorial : MonoBehaviour
 
     public void CheckDistanceKey1()
     {
-        if (!flowchartHasShown_key1 && Vector3.Distance(player.transform.position, key1.transform.position) < 1f)
+        if (!flowchartHasShown_key1 && Vector3.Distance(player.transform.position, key1.transform.position) < 5f)
         {
             flowchartHasShown_key1 = true;
             mainFlowchart.ExecuteBlock("Before Pick Up Key1");

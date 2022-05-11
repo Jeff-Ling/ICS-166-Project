@@ -10,6 +10,8 @@ public class GameManager_PipeRotation : MonoBehaviour
     [SerializeField]
     int totalPipes = 0;
 
+    private bool allCorrect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,20 @@ public class GameManager_PipeRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Check Pipes Game
+        CheckPipes();
+        if (allCorrect)
+        {
+
+        }
+    }
+
+    private void CheckPipes()
+    {
+        allCorrect = true;
+        for (int i = 0; i < pipes.Length; i++)
+        {
+            allCorrect = pipes[i].GetComponent<pipeControl>().GetisCorrected();
+        }
     }
 }

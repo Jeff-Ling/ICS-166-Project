@@ -35,4 +35,9 @@ public class pipeControl : MonoBehaviour
             isCorrected = false;
         }
     }
+
+    public bool GetisCorrected()
+    {
+        return isCorrected;
+    }
 }
