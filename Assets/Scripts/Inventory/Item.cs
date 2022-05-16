@@ -15,6 +15,7 @@ public class Item
     public enum ItemType
     {
         tutorialRoom_Key,
+        tutorialRoom_Door,
         room1_Key,
     }
 
@@ -45,6 +46,12 @@ public class Item
         button.GetComponent<TutorialRoom_Key>().SetItem(this);
         button.GetComponent<TutorialRoom_Key>().SetInventory(inventory);
 
+        // Activate text (Fungus)
+        mainFlowchart.ExecuteBlock(blockName);
+    }
+
+    public void NotCollectableItemAction()
+    {
         // Activate text (Fungus)
         mainFlowchart.ExecuteBlock(blockName);
     }

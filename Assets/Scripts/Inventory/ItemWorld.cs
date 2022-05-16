@@ -19,6 +19,7 @@ public class ItemWorld : MonoBehaviour
     **/
 
     public Item item;
+    public GameObject parent;                       // GameObject Parent
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -39,6 +40,11 @@ public class ItemWorld : MonoBehaviour
     public void DestroySelf()
     {
         Destroy(gameObject);
+
+        if (parent != null)
+        {
+            Destroy(parent);
+        }
     }
 
 }

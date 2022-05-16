@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
         else
         {
             // Not collectable item should open something immediatedly.
-            UseItem(itemTouched.GetComponent<ItemWorld>().GetItem());
+            itemTouched.GetComponent<ItemWorld>().GetItem().NotCollectableItemAction();
         }
     }
 

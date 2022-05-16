@@ -121,6 +121,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21749857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21749859}
+  - component: {fileID: 21749858}
+  m_Layer: 0
+  m_Name: Character
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &21749858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21749857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: DETECTIVE
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 730195472}
+  description: 
+--- !u!4 &21749859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21749857}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &56092593
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +500,7 @@ MonoBehaviour:
     mainFlowchart: {fileID: 1648167042}
     blockName: Pick Up Key1
     collectable: 1
+  parent: {fileID: 837114360}
 --- !u!65 &168059080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -536,6 +588,8 @@ GameObject:
   m_Component:
   - component: {fileID: 222100557}
   - component: {fileID: 222100556}
+  - component: {fileID: 222100559}
+  - component: {fileID: 222100558}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -608,6 +662,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &222100558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222100555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5cbc6f7ed086b04eabe370a5d8ef8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemType: 1
+    amount: 1
+    button: {fileID: 0}
+    mainFlowchart: {fileID: 1648167042}
+    blockName: Door1
+    collectable: 0
+  parent: {fileID: 0}
+--- !u!65 &222100559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222100555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.69, y: 2.98, z: 0.95954955}
+  m_Center: {x: 0, y: 0, z: -0.37977475}
 --- !u!1 &290492023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,11 +1502,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Detective with light
       objectReference: {fileID: 0}
-    - target: {fileID: 6722766428945897814, guid: e193db724a2645f418b1bd56c3cacb7e,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6722766428945897815, guid: e193db724a2645f418b1bd56c3cacb7e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1428,12 +1510,12 @@ PrefabInstance:
     - target: {fileID: 6722766428945897815, guid: e193db724a2645f418b1bd56c3cacb7e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -19.23
       objectReference: {fileID: 0}
     - target: {fileID: 6722766428945897815, guid: e193db724a2645f418b1bd56c3cacb7e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 6722766428945897815, guid: e193db724a2645f418b1bd56c3cacb7e,
         type: 3}
@@ -1792,7 +1874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748392473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -14.23, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1977,43 +2059,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.43
+      value: -0.48453155
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.81
+      value: -3.4167771
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.24581987
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.868238
+      value: 0.8321151
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.24783394
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.14162281
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.49614796
+      value: -0.47550586
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 16.127
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -29.386002
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -59.491
+      value: -63.746002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
@@ -2043,7 +2125,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!65 &837114364
 BoxCollider:
@@ -2440,7 +2522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233269241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.8, y: 2.51, z: 3.5}
+  m_LocalPosition: {x: -55.57, y: 2.51, z: 3.5}
   m_LocalScale: {x: 10.802091, y: 16.474941, z: 11.324638}
   m_Children: []
   m_Father: {fileID: 1689107164}
@@ -2739,7 +2821,7 @@ PrefabInstance:
     - target: {fileID: 3299547987412669392, guid: 4ed0fb690a69e99419ece5890e1e9909,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3299547987412669392, guid: 4ed0fb690a69e99419ece5890e1e9909,
         type: 3}
@@ -3579,17 +3661,14 @@ GameObject:
   - component: {fileID: 1648167042}
   - component: {fileID: 1648167044}
   - component: {fileID: 1648167046}
-  - component: {fileID: 1648167043}
   - component: {fileID: 1648167045}
   - component: {fileID: 1648167048}
-  - component: {fileID: 1648167049}
   - component: {fileID: 1648167051}
   - component: {fileID: 1648167050}
   - component: {fileID: 1648167054}
   - component: {fileID: 1648167053}
   - component: {fileID: 1648167058}
   - component: {fileID: 1648167057}
-  - component: {fileID: 1648167056}
   - component: {fileID: 1648167055}
   - component: {fileID: 1648167059}
   - component: {fileID: 1648167060}
@@ -3600,6 +3679,23 @@ GameObject:
   - component: {fileID: 1648167063}
   - component: {fileID: 1648167065}
   - component: {fileID: 1648167066}
+  - component: {fileID: 1648167043}
+  - component: {fileID: 1648167056}
+  - component: {fileID: 1648167049}
+  - component: {fileID: 1648167068}
+  - component: {fileID: 1648167073}
+  - component: {fileID: 1648167069}
+  - component: {fileID: 1648167072}
+  - component: {fileID: 1648167071}
+  - component: {fileID: 1648167070}
+  - component: {fileID: 1648167067}
+  - component: {fileID: 1648167074}
+  - component: {fileID: 1648167076}
+  - component: {fileID: 1648167075}
+  - component: {fileID: 1648167080}
+  - component: {fileID: 1648167079}
+  - component: {fileID: 1648167078}
+  - component: {fileID: 1648167077}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3620,7 +3716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 773.5567, y: 264.5}
+  scrollPos: {x: 773.5567, y: 265.5}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 733
@@ -3633,7 +3729,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1648167048}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1648167052}
   variables: []
   description: 
   stepPause: 0
@@ -3657,7 +3754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1
+  itemId: 24
   indentLevel: 0
   sayDialog: {fileID: 730195472}
 --- !u!114 &1648167044
@@ -3674,8 +3771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -358
-    y: 17
+    x: -544
+    y: -111
     width: 77
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3709,8 +3806,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Who am I \u2026\r\n"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3763,8 +3860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 220.9433
-    y: 16
+    x: -376.0567
+    y: -30
     width: 125
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3794,7 +3891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 5
+  itemId: 26
   indentLevel: 0
   sayDialog: {fileID: 730195472}
 --- !u!114 &1648167050
@@ -3865,7 +3962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: ( Use ESC to call the PAUSE Menu, you can find Inventory page there)
+  storyText: (Use ESC to call the PAUSE Menu, you can find Inventory page there)
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3894,8 +3991,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "There is light ahead of me, I should take a look \u2026"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3921,8 +4018,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Where am I \u2026\r\n"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3948,8 +4045,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Why is there a book on the ground?\r"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3971,7 +4068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 13
+  itemId: 25
   indentLevel: 0
   sayDialog: {fileID: 730195472}
 --- !u!114 &1648167057
@@ -3988,8 +4085,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -92.0567
-    y: 24
+    x: -385.0567
+    y: -107
     width: 165
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4122,7 +4219,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1648167063
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4139,7 +4236,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1648167064
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4156,7 +4253,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1648167065
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4173,7 +4270,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1648167066
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4188,6 +4285,331 @@ MonoBehaviour:
   targetObject: {fileID: 660763679}
   methodName: EnableInput
   delay: 0
+--- !u!114 &1648167067
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  storyText: "At least it's worth trying.\r"
+  description: 
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1648167068
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -174.5567
+    y: -104.5
+    width: 156
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 27
+  blockName: Before Open Door1
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1648167073}
+  - {fileID: 1648167072}
+  - {fileID: 1648167071}
+  - {fileID: 1648167070}
+  - {fileID: 1648167067}
+  - {fileID: 1648167069}
+  suppressAllAutoSelections: 0
+--- !u!114 &1648167069
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  targetObject: {fileID: 660763679}
+  methodName: EnableInput
+  delay: 0
+--- !u!114 &1648167070
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  storyText: "Maybe I can use it to unlock this door \u2026\r"
+  description: 
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1648167071
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 31
+  indentLevel: 0
+  storyText: "It is so odd that someone hides their key in a journal like this, isn\u2019t
+    it?\r\n"
+  description: 
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1648167072
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 30
+  indentLevel: 0
+  sayDialog: {fileID: 730195472}
+--- !u!114 &1648167073
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  targetObject: {fileID: 660763679}
+  methodName: DisableInput
+  delay: 0
+--- !u!114 &1648167074
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 25.443298
+    y: -103.5
+    width: 83
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 35
+  blockName: Door1
+  description: Conversation when player open the door
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1648167076}
+  - {fileID: 1648167080}
+  - {fileID: 1648167079}
+  - {fileID: 1648167078}
+  - {fileID: 1648167077}
+  - {fileID: 1648167075}
+  suppressAllAutoSelections: 0
+--- !u!114 &1648167075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 37
+  indentLevel: 0
+  targetObject: {fileID: 660763679}
+  methodName: EnableInput
+  delay: 0
+--- !u!114 &1648167076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  targetObject: {fileID: 660763679}
+  methodName: DisableInput
+  delay: 0
+--- !u!114 &1648167077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  storyText: (Use ESC to call the PAUSE Menu, you can find Inventory page there)
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1648167078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  storyText: I can search it in the inventory.
+  description: 
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1648167079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  indentLevel: 0
+  storyText: Looks like this door need a key...
+  description: 
+  character: {fileID: 21749858}
+  portrait: {fileID: 21300000, guid: 83612e1f47084ec4aa0fcd9b4ae26822, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1648167080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  sayDialog: {fileID: 730195472}
 --- !u!1 &1689107163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,7 +4796,7 @@ RectTransform:
   - {fileID: 565113855}
   - {fileID: 1258962333}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5167,6 +5589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 660763679}
   key1: {fileID: 168059078}
+  door1: {fileID: 222100555}
   mainFlowchart: {fileID: 1648167042}
 --- !u!1 &2098633701
 GameObject:
