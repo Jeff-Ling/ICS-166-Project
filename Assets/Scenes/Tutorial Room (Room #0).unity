@@ -1107,7 +1107,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1163,13 +1163,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585289462}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.01, y: 0.38, z: -6.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603994825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1396,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6722766428494607114, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.49381453
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722766428494607114, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.62421215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722766428494607114, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722766428494607114, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722766428494607124, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722766428945897802, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: backPlayer
+      value: 
+      objectReference: {fileID: 21300000, guid: 79103e6676b8c7945bf784fe0fbf4a41,
+        type: 3}
     - target: {fileID: 6722766428945897809, guid: e193db724a2645f418b1bd56c3cacb7e,
         type: 3}
       propertyPath: m_Name
@@ -1732,7 +1763,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2996,6 +3027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 644137461}
   player: {fileID: 660763679}
+  inventoryPage: {fileID: 1258962332}
 --- !u!1 &1415032107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,11 +3198,11 @@ RectTransform:
   m_Father: {fileID: 1258962333}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -441.2, y: 233.7}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30.5, y: -22.399994}
   m_SizeDelta: {x: 30, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1459750409
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
 
     private bool enableInput = true;
 
+    private float endDelay = 2f;
+    private WaitForSeconds endWait;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,11 @@ public class Player : MonoBehaviour
         inventory = new Inventory(UseItem);
 
         animator = this.GetComponent<Animator>();
+
+        EnableInput();
+
+
+        endWait = new WaitForSeconds(endDelay);
     }
 
     // Update is called once per frame
@@ -102,6 +110,8 @@ public class Player : MonoBehaviour
         switch (item.itemType)
         {
             case Item.ItemType.tutorialRoom_Key:
+                animator.Play("Detective back");
+                DisableInput();
                 SceneManager.LoadScene(2);             // Load scene to Room 1
                 break;
             case Item.ItemType.room1_Key:

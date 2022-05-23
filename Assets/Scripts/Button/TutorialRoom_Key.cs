@@ -10,11 +10,14 @@ public class TutorialRoom_Key : MonoBehaviour
     public GameObject target;
     public GameObject player;
 
+    public GameObject inventoryPage;
+
     public void OnClick()
     {
         if (Vector3.Distance(target.transform.position, player.transform.position) < 5f)
         {
             inventory.UseItem(item);
+            inventoryPage.SetActive(false);
         }
     }
 
