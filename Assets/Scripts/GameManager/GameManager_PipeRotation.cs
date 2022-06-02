@@ -7,6 +7,7 @@ public class GameManager_PipeRotation : MonoBehaviour
     public GameObject PipeHolder;
     public GameObject[] pipes;
     public GameObject puzzleBoxScene;
+    public GameObject key;
 
     [SerializeField]
     int totalPipes = 0;
@@ -35,6 +36,7 @@ public class GameManager_PipeRotation : MonoBehaviour
         {
             // Turn off game scene
             puzzleBoxScene.SetActive(false);
+            key.SetActive(true);
         }
     }
 

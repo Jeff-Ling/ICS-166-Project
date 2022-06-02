@@ -17,6 +17,8 @@ public class Item
         tutorialRoom_Key,
         tutorialRoom_Door,
         room1_Key,
+        stair01,
+        paper01,
     }
 
     public ItemType itemType;
@@ -41,13 +43,13 @@ public class Item
 
     public void ActivateButton(Inventory inventory)
     {
+        // Activate text (Fungus)
+        mainFlowchart.ExecuteBlock(blockName);
+
         // Activate the UI button
         button.SetActive(true);
         button.GetComponent<TutorialRoom_Key>().SetItem(this);
         button.GetComponent<TutorialRoom_Key>().SetInventory(inventory);
-
-        // Activate text (Fungus)
-        mainFlowchart.ExecuteBlock(blockName);
     }
 
     public void NotCollectableItemAction()

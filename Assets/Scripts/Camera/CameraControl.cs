@@ -42,7 +42,7 @@ public class CameraControl : MonoBehaviour
     {
         Vector3 targetPosition = new Vector3();
 
-        targetPosition.x = m_Target.position.x;
+        targetPosition.x = m_Target.position.x + 5f;
         targetPosition.y = 1f;
         targetPosition.z = -10f;
 
