@@ -35,7 +35,7 @@ public class menuControl : MonoBehaviour
 
     public void newGameButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

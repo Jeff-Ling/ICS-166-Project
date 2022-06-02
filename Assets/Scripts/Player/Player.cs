@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fungus;
 
 
 // Author: Jiefu Ling(jieful2)
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     private float MovementInputValue = 0f;
 
     private Animator animator;
+    public Flowchart mainFlowChat;
 
     // Inventory Element
     private Inventory inventory;              // The list of inventory
@@ -24,8 +26,7 @@ public class Player : MonoBehaviour
 
     private bool enableInput = true;
 
-    private float endDelay = 2f;
-    private WaitForSeconds endWait;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +38,6 @@ public class Player : MonoBehaviour
         animator = this.GetComponent<Animator>();
 
         EnableInput();
-
-
-        endWait = new WaitForSeconds(endDelay);
     }
 
     // Update is called once per frame
@@ -110,9 +108,9 @@ public class Player : MonoBehaviour
         switch (item.itemType)
         {
             case Item.ItemType.tutorialRoom_Key:
-                animator.Play("Detective back");
-                DisableInput();
-                SceneManager.LoadScene(2);             // Load scene to Room 1
+                // animator.Play("Detective back");
+                // SceneManager.LoadScene(2);             // Load scene to Room 1
+                mainFlowChat.ExecuteBlock("teleportPlayer");
                 break;
             case Item.ItemType.room1_Key:
                 SceneManager.LoadScene(3);             // Load scene to End Game

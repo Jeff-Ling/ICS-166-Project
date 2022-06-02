@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
+using UnityEngine.SceneManagement;
 
 public class GameManager_Room1 : MonoBehaviour
 {
@@ -45,6 +46,11 @@ public class GameManager_Room1 : MonoBehaviour
             puzzleBoxScene.SetActive(true);
             firstTimePuzzleBox = false;
         }
+    }
+
+    public void ChangeTimeScale()
+    {
+        Time.timeScale = 1f;
     }
 
     public void LightBlackOut()
@@ -103,5 +109,10 @@ public class GameManager_Room1 : MonoBehaviour
         player.transform.position = new Vector3(395f, -0.8f, 0f);
         camer.transform.position = new Vector3(400f, 1f, -10f);
 
+    }
+
+    public void loadscene()
+    {
+        SceneManager.LoadScene(1);
     }
 }

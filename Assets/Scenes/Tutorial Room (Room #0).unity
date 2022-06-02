@@ -1397,6 +1397,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6722766428945897802, guid: e193db724a2645f418b1bd56c3cacb7e,
+        type: 3}
+      propertyPath: mainFlowChat
+      value: 
+      objectReference: {fileID: 1648167042}
     - target: {fileID: 6722766428945897809, guid: e193db724a2645f418b1bd56c3cacb7e,
         type: 3}
       propertyPath: m_Name
@@ -2890,6 +2895,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3299547988080545318, guid: 4ed0fb690a69e99419ece5890e1e9909,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299547988080545318, guid: 4ed0fb690a69e99419ece5890e1e9909,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299547988080545318, guid: 4ed0fb690a69e99419ece5890e1e9909,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299547988457214150, guid: 4ed0fb690a69e99419ece5890e1e9909,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299547988457214150, guid: 4ed0fb690a69e99419ece5890e1e9909,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299547988457214150, guid: 4ed0fb690a69e99419ece5890e1e9909,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ed0fb690a69e99419ece5890e1e9909, type: 3}
 --- !u!1 &1389245451
@@ -3638,7 +3673,6 @@ GameObject:
   - component: {fileID: 1648167047}
   - component: {fileID: 1648167042}
   - component: {fileID: 1648167044}
-  - component: {fileID: 1648167046}
   - component: {fileID: 1648167045}
   - component: {fileID: 1648167048}
   - component: {fileID: 1648167051}
@@ -3674,6 +3708,9 @@ GameObject:
   - component: {fileID: 1648167079}
   - component: {fileID: 1648167078}
   - component: {fileID: 1648167077}
+  - component: {fileID: 1648167046}
+  - component: {fileID: 1648167081}
+  - component: {fileID: 1648167082}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3694,7 +3731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 758.046, y: 237.31915}
+  scrollPos: {x: 701.5567, y: 391.5}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 733
@@ -3706,9 +3743,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1648167057}
-  selectedCommands:
-  - {fileID: 1648167055}
+  - {fileID: 1648167081}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -3749,9 +3785,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -544
-    y: -111
-    width: 77.2
+    x: -543
+    y: -112
+    width: 77
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3840,7 +3876,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -376.0567
     y: -30
-    width: 126.8
+    width: 125
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4063,9 +4099,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -383.99286
-    y: -112.319145
-    width: 167.6
+    x: -388.99286
+    y: -113.319145
+    width: 165
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4304,9 +4340,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -174.5567
-    y: -104.5
-    width: 158
+    x: -169.5567
+    y: -103.5
+    width: 156
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4441,8 +4477,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 25.443298
-    y: -103.5
-    width: 83.6
+    y: -104.5
+    width: 83
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4588,6 +4624,52 @@ MonoBehaviour:
   itemId: 38
   indentLevel: 0
   sayDialog: {fileID: 730195472}
+--- !u!114 &1648167081
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 171.4433
+    y: -105.5
+    width: 188
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 42
+  blockName: Change Scene to Room1
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1648167082}
+  suppressAllAutoSelections: 0
+--- !u!114 &1648167082
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648167041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: Room#1
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
 --- !u!1 &1689107163
 GameObject:
   m_ObjectHideFlags: 0
