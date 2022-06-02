@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6722766428494607125}
   - component: {fileID: 6722766428494607114}
+  - component: {fileID: 1528964490}
   m_Layer: 8
   m_Name: latern
   m_TagString: Untagged
@@ -42,9 +43,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.8258375, b: 0.6650944, a: 1}
-  m_Intensity: 1
-  m_Range: 7
+  m_Color: {r: 0.9490196, g: 0.5686275, b: 0.2784314, a: 1}
+  m_Intensity: 2
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -92,6 +93,22 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1528964490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722766428494607124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba90ecc9ba48af48aa6ef6c0e9dbabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 6722766428494607114}
+  minIntensity: 0
+  maxIntensity: 2
+  smoothing: 40
 --- !u!1 &6722766428945897809
 GameObject:
   m_ObjectHideFlags: 0
