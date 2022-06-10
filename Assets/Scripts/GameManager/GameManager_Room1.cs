@@ -17,12 +17,14 @@ public class GameManager_Room1 : MonoBehaviour
     private bool Say_1 = false;
     private bool Say_2 = false;
     private bool Say_3 = false;
+    private bool meetGirl = false;
 
     public GameObject[] backgroundLight;
     public GameObject littleGirl;
     public GameObject point1;
     public GameObject stair;
     public GameObject anotherScene;
+    public GameObject another_littleGirl;
 
     private void Start()
     {
@@ -37,6 +39,7 @@ public class GameManager_Room1 : MonoBehaviour
         ApproachStair();
         CheckDistancePuzzleBox();
         Say_OutOfMind();
+        MeetGirl();
     }
 
     private void OpenPipeGame()
@@ -114,5 +117,14 @@ public class GameManager_Room1 : MonoBehaviour
     public void loadscene()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void MeetGirl()
+    {
+        if (!meetGirl && Vector3.Distance(player.transform.position, another_littleGirl.transform.position) < 3f)
+        {
+            meetGirl = true;
+            mainFlowchart.ExecuteBlock("MeetGirl");
+        }
     }
 }
