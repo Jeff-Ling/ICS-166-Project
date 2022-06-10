@@ -13,11 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus.FungusLuaEditor", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus.LineEndingsEditor", "Fungus.LineEndingsEditor.csproj", "{1436F23D-9307-04D4-C0CD-E717340E6883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{EF405F7D-D874-5F47-937B-85BA43688F70}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus.FungusLuaJSONCheckerEditor", "Fungus.FungusLuaJSONCheckerEditor.csproj", "{4E127302-03C0-706B-4DD2-7B0E3968AD85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus.UsfxrEditor", "Fungus.UsfxrEditor.csproj", "{1C948BC8-9484-6241-E21C-09D82E98E7F4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{EF405F7D-D874-5F47-937B-85BA43688F70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +49,10 @@ Global
 		{1436F23D-9307-04D4-C0CD-E717340E6883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1436F23D-9307-04D4-C0CD-E717340E6883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1436F23D-9307-04D4-C0CD-E717340E6883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF405F7D-D874-5F47-937B-85BA43688F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF405F7D-D874-5F47-937B-85BA43688F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF405F7D-D874-5F47-937B-85BA43688F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF405F7D-D874-5F47-937B-85BA43688F70}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E127302-03C0-706B-4DD2-7B0E3968AD85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E127302-03C0-706B-4DD2-7B0E3968AD85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E127302-03C0-706B-4DD2-7B0E3968AD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,10 +61,6 @@ Global
 		{1C948BC8-9484-6241-E21C-09D82E98E7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C948BC8-9484-6241-E21C-09D82E98E7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C948BC8-9484-6241-E21C-09D82E98E7F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF405F7D-D874-5F47-937B-85BA43688F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF405F7D-D874-5F47-937B-85BA43688F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF405F7D-D874-5F47-937B-85BA43688F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF405F7D-D874-5F47-937B-85BA43688F70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
